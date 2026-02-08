@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Detail Berita</title>
+  <link rel="stylesheet" href="./style.css"/>
+</head>
+<body>
+  <header class="container header">
+    <h1>Detail Berita</h1>
+    <p><a href="/" style="color:#aab4e6; text-decoration:none;">← Kembali ke Home</a></p>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <div id="detailStatus" class="muted">Loading...</div>
+
+      <div id="detailWrap" style="display:none;">
+        <img id="detailImg" alt="news image" style="width:100%; max-height:520px; object-fit:cover; border-radius:14px; border:1px solid rgba(255,255,255,.08);" />
+        <div style="padding-top:12px;">
+          <p id="detailCaption" class="caption" style="font-size:16px;"></p>
+          <div id="detailMeta" class="meta muted"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <small class="muted">News Uploader</small>
+  </footer>
+
+  <script src="./detail.js"></script>
+</body>
+</html>

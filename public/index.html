@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Upload Berita</title>
+  <link rel="stylesheet" href="./style.css"/>
+</head>
+<body>
+  <header class="container header">
+    <h1>News Uploader</h1>
+    <p>Upload gambar + keterangan, lalu tampil sebagai berita.</p>
+  </header>
+
+  <main class="container grid">
+    <section class="card">
+      <h2>Upload Berita</h2>
+
+      <form id="uploadForm" class="form">
+        <label class="label">
+          Gambar
+          <input id="imageInput" name="image" type="file" accept="image/*" required />
+        </label>
+
+        <div class="preview" id="previewBox">
+          <span class="muted">Preview akan muncul di sini</span>
+          <img id="previewImg" alt="Preview" />
+        </div>
+
+        <label class="label">
+          Keterangan
+          <textarea id="captionInput" name="caption" rows="3" placeholder="Tulis keterangan gambar..." required></textarea>
+        </label>
+
+        <button class="btn" type="submit">Upload</button>
+        <div id="status" class="status"></div>
+      </form>
+    </section>
+
+    <section class="card">
+      <div class="row">
+        <h2>Daftar Berita</h2>
+        <button id="refreshBtn" class="btn secondary" type="button">Refresh</button>
+      </div>
+
+      <div id="posts" class="posts"></div>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <small class="muted">Backend: Golang • Frontend: HTML/CSS/JS</small>
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>
